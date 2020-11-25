@@ -7,16 +7,12 @@ from models import db
 
 
 app = None
-security_db = MongoEngine()
-bcrypt = Bcrypt()
-
-
 def setup(cur_app):
     global app
     app = cur_app
-    security_db.init_app(app)
-    bcrypt.init_app(app)
 
+security_db = MongoEngine(app)
+bcrypt = Bcrypt(app)
 
 # 不同種權限身份
 class Role(security_db.Document, RoleMixin):
