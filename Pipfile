@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "==19.10b0"
+flake8 = "*"
+
+[packages]
+flask = "*"
+email-validator = "*"
+flask-bcrypt = "*"
+flask-mongoengine = "*"
+flask-security-too = "*"
+flake8 = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+format = "black cram_school/ -l 79"
+serve = "python -m cram_school.main"
+lint = "flake8 cram_school/"

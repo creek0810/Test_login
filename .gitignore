@@ -1,3 +1,5 @@
 models/db.py
 models/_pycache
 __pycache__
+.DS_Store
+.venv/
